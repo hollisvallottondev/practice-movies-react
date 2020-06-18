@@ -1,0 +1,96 @@
+@import '../../colors.scss'; 
+
+.cardContainer {
+	height: 300px;
+	display: flex;
+	background-color: $secondaryColor;
+	color: $primaryColor;
+	font-size: calc(0.75vh + 0.75vw);
+	margin-bottom: 15px;
+	transition: border 0.2s linear;
+
+	@extend .container;
+	
+	.posterContainer {
+		width: 200px;
+	}
+	.detailsContainer {
+		width: 100%;
+		padding-left: 20px;
+		.cardHeader {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			h3 {
+				color: $accentColor;
+				margin: 0;
+			}
+
+			.rating {
+				justify-self: flex-start;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-width: 35px;
+				min-height: 20px;
+				max-width: 35px;
+				max-height: 20px;
+				padding: 5px;
+				color: $secondaryColor;
+				background-color: $accentColor;
+				border-radius: 5px;
+			}
+		}
+
+		.cardDescription {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+
+			p {
+				text-align: justify;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+			.overview {
+				max-height: 165px;
+				margin-bottom: 0;
+				overflow: scroll;
+			}
+
+			label {
+				font-weight: bold;
+				margin-bottom: 5px;
+				cursor: inherit;
+			}
+		}
+	}
+
+
+}
+
+.hover {
+	&:hover{
+		border: 5px solid $accentColor;
+		cursor: pointer;
+		background-color: $primaryColor;
+		color: white;
+	}
+}
+
+.container {
+	padding: 20px;
+}
+
+
+.movieUnavailable {
+	border: 1px solid $primaryColor;
+	width: 200px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $secondaryColor;
+	color: $primaryColor;
+}

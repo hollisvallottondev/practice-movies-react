@@ -1,0 +1,84 @@
+@import './colors.scss'; 
+$headerHeight: 80px;
+
+.border {
+	border: 1px solid white;
+}
+
+body {
+	background-color: $primaryColor;
+	margin: 0;
+	padding: 0px 45px 0px 45px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainContainer {
+	padding-right: 15px;
+	overflow-y: scroll;
+	grid-area: main;
+	max-height: 100%;
+	height: 100%;
+}
+
+.appContainer {
+	height: 100%;
+	display: grid;
+	grid-template-areas: 
+	'header header' 
+	'main searchbox';
+	grid-template-rows: $headerHeight 1fr;
+	grid-template-columns: 3fr 1fr;
+}
+
+.sideBarContainer {
+	grid-area: searchbox;
+	display: flex;
+	flex-direction: row;
+}
+
+.title {
+	color: $accentColor; 
+	margin: 0;
+}
+
+.header {
+	grid-area: header;
+	padding: 20px 0px;
+}
+
+.modalActions {
+	display: flex;
+	justify-content: flex-end;
+
+	button {
+		width: 20%;
+		height: 30px;
+		margin-right: 15px;
+		cursor: pointer;
+	}
+
+	.offline {
+		border: 1px solid $primaryColor;
+		color: $primaryColor;
+		background-color: $secondaryColor;
+
+		&:hover {
+			color: $secondaryColor;
+			background-color: $accentColor;
+			border: none;
+		}
+	}
+
+	.online {
+		color: $secondaryColor;
+		background-color: $primaryColor;
+		border: none;
+		
+		&:hover {
+			color: $secondaryColor;
+			background-color: $accentColor;
+			border: none;
+		}
+
+	}
+}
