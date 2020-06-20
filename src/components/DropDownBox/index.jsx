@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import styles from "./styles.scss";
 import { useClickOutside } from '../../hooks/clickOutside'; 
 
-const DropDownBox = ({ handleSearch, elements, onOptionSelected, icon = null }) => {
+const DropDownBox = ({ handleSearch, elements, onOptionSelected, placeHolder, icon = null }) => {
   const keys = 	Object.keys(elements);
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState('');
@@ -39,7 +39,7 @@ const DropDownBox = ({ handleSearch, elements, onOptionSelected, icon = null }) 
 		  {
 			  icon && <i className={icon}></i>
 		  }
-        <input type="text" onChange={handleChange} onClick={handleClick} value ={value}/>
+        <input type="text" onChange={handleChange} onClick={handleClick} value ={value} placeholder={placeHolder}/>
       </div>
 	  {
 	  	keys.length && isFocused? (

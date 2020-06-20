@@ -82,3 +82,25 @@ body {
 
 	}
 }
+
+
+@media only screen and (max-width: 768px) {
+	.header {
+		grid-area: none;
+		display: none;
+	}
+
+	.appContainer {
+		height: 100%;
+		display: grid;
+		grid-template-areas: 
+		'searchbox' 
+		'main';
+		grid-template-rows: $headerHeight 1fr;
+		grid-template-columns: 100%;
+	}
+
+	.mainContainer {
+		padding-right: 0px;
+	}
+}

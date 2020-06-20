@@ -94,3 +94,10 @@
 	background-color: $secondaryColor;
 	color: $primaryColor;
 }
+
+
+@media only screen and (max-width: 768px) {
+	.detailsContainer {
+		padding-left: 0px;
+	}
+}

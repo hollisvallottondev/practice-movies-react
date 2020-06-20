@@ -17,7 +17,7 @@ const Modal = ({open, handleClose, children}) => {
 		<div className={styles.modalMask}>
 			<div className={styles.modalWrapper}>
 		  		<div ref={modalRef} className={styles.modalContainer}>
-				  	<i class="fas fa-times-circle" onClick={handleClose}></i>
+				  	<i className={"fas fa-times-circle"} onClick={handleClose}></i>
 					 {children}
 				</div>
 			</div>

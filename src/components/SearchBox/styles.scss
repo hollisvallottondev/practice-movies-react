@@ -22,21 +22,34 @@
 	height: 80px;
 
 	@extend .containerLayout;
+	padding: 20px;
+
 }
 
 .labelsContainer {
 	background-color: $secondaryColor;
-	min-height: 300px;
-	height: 300px;
 
 	@extend .containerLayout;
 
 	justify-content: flex-start;
+	padding: 20px;
+
+}
+
+.genresContainer {
+	background-color: $secondaryColor;
+
+	@extend .containerLayout;
+
+	justify-content: flex-start;
+	padding: 20px;
+
 }
 
 h4 {
 	align-self: flex-start;
 	margin: 0;
+	margin-bottom: 10px;
 }
 
 ul {
@@ -56,4 +69,80 @@ ul {
 	padding-left: 5px;
 
 }
+
+.header {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	$sideBarWidth: 260px;
+	.header {
+		position: absolute;
+		z-index: 999;
+		top:0;
+		left: 0;
+		display: flex;
+		width: 100vw;
+		height: 40px;
+		background-color: $secondaryColor;
+		justify-content: flex-start;
+		align-items: center;
+		i {
+			cursor: pointer;
+			width: 70px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:active {
+				background-color: $primaryColor;
+				color: white;
+			}
+		}
+	}
+
+	.navBarContainer {
+		position: fixed;
+		top:0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.searchBoxWrapper {
+		top:0;
+		left: 0;
+		z-index: 100;
+		width: $sideBarWidth;
+		max-width: $sideBarWidth ;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background-color: $secondaryColor;
+		position: inherit;
+
+		.searchBoxContainer {
+			margin-bottom: 0;
+			margin-top: 40px;
+			padding-top: 20px;
+			flex: 1;
+			width: auto;
+		}
+		
+
+		.labelsContainer {
+			justify-content: flex-start;
+			overflow-y: scroll;
+			flex: 2;
+			width: auto;
+		}
+
+		.genresContainer {
+			justify-content: flex-start;
+			flex: 4;
+			width: auto;
+		}
+	}
+}
+
 
