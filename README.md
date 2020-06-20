@@ -9,3 +9,5 @@ Future todos:
 Pagination needed 
 Adding tests 
 Service workers for PWA support. 
+
+Did not use axios or react router as I did not see the need. 
