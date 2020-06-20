@@ -1,0 +1,11 @@
+export const baseMoviesUrl = 'https://api.themoviedb.org/3';
+export const apiKey = 'f37e3a1c98b79b0b66a42e41db6a0d91';
+export const bearerToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMzdlM2ExYzk4Yjc5YjBiNjZhNDJlNDFkYjZhMGQ5MSIsInN1YiI6IjVlZTU3NjljM2ZmMmRmMDAyMTY3ZTMxYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TQ7wGgyZ7S8e1Mhk2hKsJlnQc62UKIuDF2dDgdYhRgk'
+export const imgBaseUrl = 'https://image.tmdb.org/t/p/';
+export const topRatedMoviesUri = '/movie/top_rated';
+export const searchKeyWordBaseUri = '/search/keyword';
+export const latestMoviesUri = '/movie/latest';
+export const movieUri = '/movie';
+export const discoverMovieUri = '/discover/movie';
+export const searchMovieUri = '/search/movie';
+export const genresUri = '/genre/movie/list';
